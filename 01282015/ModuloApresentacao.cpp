@@ -2,7 +2,7 @@
 
 void Apresentacao ::executar()
 {
-	 IAAutenticacao *cntrAAutenticacao = new CntrIAAutenticacao();
+	 IAAutenticacao *cntrAAutenticacao = new CntrAAutenticacao();
 	 ISAutenticacao *cntrSAutenticacao = new CntrSAutenticacao();
 	 cntrAAutenticacao->setCntrSAutenticacao(cntrSAutenticacao);
 	 IAContas *cntrAContas = new CntrAContas();

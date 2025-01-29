@@ -24,10 +24,14 @@
 #include "entidades.cpp"
 #include "testes.hpp"
 #include "testes.cpp"
-
-
-
-
+#include "InterfacesApresentacaoAutenticacao.hpp"
+#include "InterfacesApresentacaoContas.hpp"
+#include "InterfaceServicoAutenticacao.hpp"
+#include "InterfaceServicoContas.hpp"
+#include "CntrServicoContas.hpp"
+#include "CntrServicoContas.cpp"
+#include "CntrApresentcaoContas.hpp"
+#include "CntrApresentcaoContas.cpp"
 
 class Apresentacao {
     

@@ -1,5 +1,5 @@
-#ifndef CNTRAPRESENTACAOAUTENTICACAO_H_INCLUDED
-#define CNTRAPRESENTACAOAUTENTICACAO_H_INCLUDED
+#ifndef CNTRAPRESENTACAOAUTENTICACAO_HPP_INCLUDED
+#define CNTRAPRESENTACAOAUTENTICACAO_HPP_INCLUDED
 
 #include "InterfacesApresentacaoAutenticacao.hpp"
 #include <stdexcept>
@@ -11,17 +11,21 @@
 
 using namespace std;
 
-class CntrIAAutenticacao: public IAAutenticacao {
-private:
-    ISAutenticacao *cntrISAutenticacao;
-public:
-    bool autenticar(Codigo*);
-    void setCntrISAutenticacao(ISAutenticacao*);
-};
 
-void inline CntrIAAutenticacao::setCntrISAutenticacao(ISAutenticacao *cntrISAutenticacao){
-    this-> cntrISAutenticacao = cntrISAutenticacao;
+class CntrAAutenticacao : public IAAutenticacao
+{
+  private:
+	 ISAutenticacao *cntrSAutenticacao;
+
+  public:
+	 bool autenticar(Codigo *);
+	 void setCntrSAutenticacao(ISAutenticacao *);
+};
+inline void CntrAAutenticacao::setCntrSAutenticacao(ISAutenticacao *ptrCntrSAutenticacao)
+{
+	 this->cntrSAutenticacao = ptrCntrSAutenticacao;
 }
 
 
-#endif // CNTRAPRESENTACAOAUTENTICACAO_H_INCLUDED
+
+#endif // CNTRAPRESENTACAOAUTENTICACAO_HPP_INCLUDED
